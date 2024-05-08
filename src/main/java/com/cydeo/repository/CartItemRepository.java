@@ -1,6 +1,9 @@
 package com.cydeo.repository;
 
-public interface CartItemRepository {
+import com.cydeo.entity.CartItem;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CartItemRepository extends JpaRepository<CartItem, Long> {
 
     //Write a derived query to get the count of all cart items
 

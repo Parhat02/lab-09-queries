@@ -1,6 +1,9 @@
 package com.cydeo.repository;
 
-public interface CustomerRepository {
+import com.cydeo.entity.Customer;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
     //Write a derived query to get customer by username
 

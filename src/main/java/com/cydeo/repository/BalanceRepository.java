@@ -1,6 +1,9 @@
 package com.cydeo.repository;
 
-public interface BalanceRepository {
+import com.cydeo.entity.Balance;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface BalanceRepository extends JpaRepository<Balance, Long> {
 
     //Write a native query to get top 5 max balance
 

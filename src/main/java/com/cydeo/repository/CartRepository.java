@@ -1,6 +1,9 @@
 package com.cydeo.repository;
 
-public interface CartRepository {
+import com.cydeo.entity.Cart;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CartRepository extends JpaRepository<Cart, Long> {
 
     //Write a derived query to get all cart by specific discount type
 

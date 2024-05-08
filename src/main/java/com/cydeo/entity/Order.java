@@ -4,15 +4,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.math.BigDecimal;
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @Table(name = "orders")
 public class Order extends BaseEntity{

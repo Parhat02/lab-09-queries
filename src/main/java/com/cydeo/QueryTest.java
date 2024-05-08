@@ -39,5 +39,9 @@ public class QueryTest implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        System.out.println("Address Of The With Customer Id : " + addressRepository.getAllAddresses(3));
+        System.out.println("Address : " + addressRepository.findTop3ByNameStartingWith("Home"));
+        System.out.println("Top 3 Address of that email: " + addressRepository.findDistinctTop3ByCustomerEmail("elawie26@exblog.jp"));
+
     }
 }

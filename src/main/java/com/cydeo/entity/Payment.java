@@ -4,15 +4,13 @@ import com.cydeo.enums.PaymentMethod;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.math.BigDecimal;
 
 @Entity
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 public class Payment extends BaseEntity{
 

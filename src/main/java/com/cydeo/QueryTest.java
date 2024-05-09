@@ -49,6 +49,12 @@ public class QueryTest implements CommandLineRunner {
         System.out.println("Balance: " + balanceRepository.findByAmountGreaterThanEqual(BigDecimal.valueOf(980)));
         System.out.println("Balance: " + balanceRepository.findByAmountLessThanEqual(BigDecimal.valueOf(50)));
 
+        System.out.println("Count of the item in cart_item table: " + cartItemRepository.countCartItemBy());
+        System.out.println("Items in a specific cart: " + cartItemRepository.findByCartId(452L));
+        System.out.println("Items in a specific cart and product: " + cartItemRepository.findByCartIdAndProductNameContains(452L, "Sauce Tomato Pouch"));
+        System.out.println("Items in a specific cart without discount: " + cartItemRepository.findByCartIdAndDiscountIdIsNull(3L));
+
+
 
 
 

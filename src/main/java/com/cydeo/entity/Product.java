@@ -1,9 +1,6 @@
 package com.cydeo.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -20,7 +17,7 @@ public class Product extends BaseEntity {
     private Integer quantity;
     private Integer remainingQuantity;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "product_category_rel",
             joinColumns = @JoinColumn(name = "p_id"),
             inverseJoinColumns = @JoinColumn(name = "c_id"))

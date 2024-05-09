@@ -58,7 +58,8 @@ public class QueryTest implements CommandLineRunner {
         System.out.println("Cart for a specific discount Type: " + cartRepository.findByDiscountDiscountType(DiscountType.valueOf("RATE_BASED")));
         System.out.println("Cart By Customer: " + cartRepository.findCartByCustomerId(3L));
 
-
+        System.out.println("Category By Name: " + categoryRepository.findByName("Termite Control"));
+        System.out.println("Category By Name: " + categoryRepository.findTop3ByOrderByName());
 
 
     }

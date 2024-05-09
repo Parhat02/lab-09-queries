@@ -1,5 +1,6 @@
 package com.cydeo;
 
+import com.cydeo.enums.DiscountType;
 import com.cydeo.repository.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -54,6 +55,8 @@ public class QueryTest implements CommandLineRunner {
         System.out.println("Items in a specific cart and product: " + cartItemRepository.findByCartIdAndProductNameContains(452L, "Sauce Tomato Pouch"));
         System.out.println("Items in a specific cart without discount: " + cartItemRepository.findByCartIdAndDiscountIdIsNull(3L));
 
+        System.out.println("Cart for a specific discount Type: " + cartRepository.findByDiscountDiscountType(DiscountType.valueOf("RATE_BASED")));
+        System.out.println("Cart By Customer: " + cartRepository.findCartByCustomerId(3L));
 
 
 

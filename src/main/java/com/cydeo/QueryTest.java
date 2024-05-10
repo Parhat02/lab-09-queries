@@ -64,7 +64,9 @@ public class QueryTest implements CommandLineRunner {
         System.out.println("Customer By UserName: " + customerRepository.findByUserName("asturton0"));
         System.out.println("Customer By Email: " + customerRepository.findByEmail("asturton0@list-manage.com"));
 
-
+        System.out.println("Discount Greater than the amount: " + discountRepository.findByDiscountGreaterThan(BigDecimal.valueOf(25)));
+        System.out.println("Discount with a specific amount: " + discountRepository.findByDiscountType(DiscountType.valueOf("RATE_BASED")));
+        System.out.println("Discount between the given range: " + discountRepository.findByDiscountBetween(BigDecimal.valueOf(25), BigDecimal.valueOf(75)));
 
 
 

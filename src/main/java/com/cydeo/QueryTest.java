@@ -68,6 +68,11 @@ public class QueryTest implements CommandLineRunner {
         System.out.println("Discount with a specific amount: " + discountRepository.findByDiscountType(DiscountType.valueOf("RATE_BASED")));
         System.out.println("Discount between the given range: " + discountRepository.findByDiscountBetween(BigDecimal.valueOf(25), BigDecimal.valueOf(75)));
 
+        System.out.println("Top 5 orders: " + orderRepository.findTop3ByOrderByTotalPriceDesc());
+        System.out.println("Check is there any orders by customer email: " + orderRepository.findByCustomerEmail("asturton0@list-manage.com"));
+        System.out.println("Orders that have equal totalPrice and paidPrice: " + orderRepository.findByTotalPriceEqualsPaidPrice());
+
+
 
 
     }

@@ -19,4 +19,5 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
     @Query("SELECT o FROM Order o where o.totalPrice = o.paidPrice")
     List<Order> findByTotalPriceEqualsPaidPrice();
 
+
 }

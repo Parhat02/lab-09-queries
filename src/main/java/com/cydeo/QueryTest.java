@@ -72,8 +72,11 @@ public class QueryTest implements CommandLineRunner {
         System.out.println("Check is there any orders by customer email: " + orderRepository.findByCustomerEmail("asturton0@list-manage.com"));
         System.out.println("Orders that have equal totalPrice and paidPrice: " + orderRepository.findByTotalPriceEqualsPaidPrice());
 
+        System.out.println("Find the total sum of all payments made: " + paymentRepository.sumPaidPrice());
+        System.out.println("Find the average amount paid for all payments: " + paymentRepository.AvgPaidPrice());
 
-
+        System.out.println("Get product by specific name: " + productRepository.findProductByName("Baking Soda"));
+        System.out.println("The count of products that have a price greater than specific amount: " + productRepository.countProductByPriceGreaterThanEqual(BigDecimal.valueOf(80)));
 
     }
 }
